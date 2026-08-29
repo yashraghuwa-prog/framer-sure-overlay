@@ -236,7 +236,7 @@
     visibility: hidden !important;
   }
 
-  /* 2. Black Part & Text Moved Down Together: Showing more of the watch */
+  /* 2. Black Part & Text Moved Down Together */
   .framer-y1onvt {
     background: linear-gradient(180deg, 
       rgba(10, 13, 20, 0) 0%, 
@@ -272,7 +272,6 @@
     }
   }
 
-  /* Text readability with deep shadow */
   .framer-1nxi3rr {
     background: transparent !important;
     backdrop-filter: none !important;
@@ -283,13 +282,16 @@
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 0 28px rgba(0, 0, 0, 0.9), 0 4px 30px rgba(0, 0, 0, 0.85) !important;
   }
 
-  /* 3. Earth: Reaches last outer ring, starts perpendicular (12 o clock), revolves smoothly in same direction */
-  @keyframes orbitEarthPerpendicular {
+  /* 3. Earth Confined Inside the Watch: Moves from Middle to Right and Back to Middle */
+  @keyframes earthWatchArc {
     0% {
-      transform: rotate(-90deg);
+      transform: rotate(-90deg); /* Middle of the watch (12 o'clock perpendicular) */
+    }
+    50% {
+      transform: rotate(-15deg); /* Right side of the watch arch */
     }
     100% {
-      transform: rotate(270deg);
+      transform: rotate(-90deg); /* Back to middle of the watch */
     }
   }
 
@@ -297,12 +299,12 @@
     overflow: visible !important;
   }
   .framer-1w9q7pm {
-    width: 95% !important;
-    left: 2.5% !important;
-    top: calc(48.9266% - 20px) !important;
-    height: 40px !important;
+    width: 78% !important;
+    left: 11% !important;
+    top: calc(48.9266% - 19px) !important;
+    height: 38px !important;
     transform-origin: 50% 50% !important;
-    animation: orbitEarthPerpendicular 75s linear infinite !important;
+    animation: earthWatchArc 14s ease-in-out infinite !important;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -310,23 +312,23 @@
     pointer-events: none !important;
   }
   .framer-1ig6k18 {
-    width: 40px !important;
-    height: 40px !important;
+    width: 36px !important;
+    height: 36px !important;
     position: absolute !important;
     top: 50% !important;
     right: 0 !important;
     bottom: unset !important;
     transform: translateY(-50%) !important;
     border-radius: 50% !important;
-    box-shadow: 0 0 22px rgba(70, 175, 255, 1), 0 0 45px rgba(0, 130, 255, 0.8), 0 0 70px rgba(0, 80, 220, 0.5) !important;
+    box-shadow: 0 0 20px rgba(70, 175, 255, 1), 0 0 40px rgba(0, 130, 255, 0.8), 0 0 60px rgba(0, 80, 220, 0.5) !important;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
     z-index: 35 !important;
   }
   .framer-1ig6k18 img {
-    width: 40px !important;
-    height: 40px !important;
+    width: 36px !important;
+    height: 36px !important;
     border-radius: 50% !important;
     display: block !important;
   }
