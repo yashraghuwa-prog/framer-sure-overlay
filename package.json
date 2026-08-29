@@ -1,0 +1,12 @@
+{
+  "name": "framer-sure-overlay-local",
+  "version": "1.0.0",
+  "description": "Local offline copy of Framer sure-overlay with full animations",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
