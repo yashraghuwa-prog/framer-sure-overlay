@@ -282,13 +282,13 @@
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 0 28px rgba(0, 0, 0, 0.9), 0 4px 30px rgba(0, 0, 0, 0.85) !important;
   }
 
-  /* 3. Earth Confined Inside the Watch: Moves from Middle to Right and Back to Middle */
+  /* 3. Earth: Touching the Outer Golden Watch Rim & Orbiting Smoothly Across the Top Arch */
   @keyframes earthWatchArc {
     0% {
-      transform: rotate(-90deg); /* Middle of the watch (12 o'clock perpendicular) */
+      transform: rotate(-90deg); /* Middle (perpendicular / 12 o'clock touching top arch) */
     }
     50% {
-      transform: rotate(-15deg); /* Right side of the watch arch */
+      transform: rotate(-20deg); /* Right side of the watch arch */
     }
     100% {
       transform: rotate(-90deg); /* Back to middle of the watch */
@@ -299,10 +299,10 @@
     overflow: visible !important;
   }
   .framer-1w9q7pm {
-    width: 78% !important;
-    left: 11% !important;
-    top: calc(48.9266% - 19px) !important;
-    height: 38px !important;
+    width: 96% !important;
+    left: 2% !important;
+    top: calc(48.9266% - 20px) !important;
+    height: 40px !important;
     transform-origin: 50% 50% !important;
     animation: earthWatchArc 14s ease-in-out infinite !important;
     display: block !important;
@@ -311,24 +311,41 @@
     z-index: 30 !important;
     pointer-events: none !important;
   }
+
+  /* White pointer line: Only from center point forward to Earth, ZERO tail in the back */
+  .framer-qbqywg, .framer-8Ymix .framer-qbqywg {
+    position: absolute !important;
+    left: 50% !important;
+    right: 22px !important;
+    top: calc(50% - 1px) !important;
+    height: 1.5px !important;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.85) 60%, rgba(120, 210, 255, 1) 100%) !important;
+    box-shadow: 0 0 8px rgba(100, 200, 255, 0.75) !important;
+    border: none !important;
+    border-radius: 2px !important;
+    z-index: 25 !important;
+    inset: unset !important;
+  }
+
+  /* Earth planet: Touching the golden watch rim */
   .framer-1ig6k18 {
-    width: 36px !important;
-    height: 36px !important;
+    width: 40px !important;
+    height: 40px !important;
     position: absolute !important;
     top: 50% !important;
     right: 0 !important;
     bottom: unset !important;
     transform: translateY(-50%) !important;
     border-radius: 50% !important;
-    box-shadow: 0 0 20px rgba(70, 175, 255, 1), 0 0 40px rgba(0, 130, 255, 0.8), 0 0 60px rgba(0, 80, 220, 0.5) !important;
+    box-shadow: 0 0 22px rgba(70, 175, 255, 1), 0 0 45px rgba(0, 130, 255, 0.85), 0 0 70px rgba(0, 80, 220, 0.5) !important;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
     z-index: 35 !important;
   }
   .framer-1ig6k18 img {
-    width: 36px !important;
-    height: 36px !important;
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 50% !important;
     display: block !important;
   }
@@ -450,7 +467,6 @@
 
 <script id="custom-interactions">
 (function() {
-  // 1. Scroll-based Top Bar black strip effect (active only when scrolled down)
   function handleNavScroll() {
     var nav = document.querySelector('.framer-pa1xsi-container');
     if (nav) {
@@ -465,7 +481,6 @@
   window.addEventListener('DOMContentLoaded', handleNavScroll);
   setTimeout(handleNavScroll, 100);
 
-  // 2. Comprehensive English <-> Hindi Translation Map
   var translations = [
     // Navbar
     { en: "The Idea", hi: "विचार" },
@@ -479,6 +494,8 @@
     { en: "Time, as the", hi: "समय, जैसा" },
     { en: "Vedas measured it.", hi: "वेदों ने मापा।" },
     { en: "Patented · 30-Hour Vedic Time System", hi: "पेटेंटकृत · ३० घंटे की वैदिक समय प्रणाली" },
+    { en: "Aarohanam Labs has revived the world’s oldest cosmology of time — a 30-hour day, anchored to the sun, divided into 30 muhurats — and rebuilt it as a living digital instrument. From the first tower clock at Ujjain to the device on your wrist.", hi: "आरोहणम् लैब्स ने समय की विश्व की सबसे प्राचीन खगोलीय प्रणाली को पुनर्जीवित किया है — एक ३० घंटे का दिन, जो सूर्य पर आधारित, ३० मुहूर्तों में विभाजित है — और इसे एक जीवंत डिजिटल उपकरण के रूप में पुनः निर्मित किया है। उज्जैन की पहली टॉवर घड़ी से लेकर आपकी कलाई तक।" },
+    { en: "Aarohanam Labs has revived the world's oldest cosmology of time — a 30-hour day, anchored to the sun, divided into 30 muhurats — and rebuilt it as a living digital instrument. From the first tower clock at Ujjain to the device on your wrist.", hi: "आरोहणम् लैब्स ने समय की विश्व की सबसे प्राचीन खगोलीय प्रणाली को पुनर्जीवित किया है — एक ३० घंटे का दिन, जो सूर्य पर आधारित, ३० मुहूर्तों में विभाजित है — और इसे एक जीवंत डिजिटल उपकरण के रूप में पुनः निर्मित किया है। उज्जैन की पहली टॉवर घड़ी से लेकर आपकी कलाई तक।" },
     { en: "Aarohanam Labs has revived the world’s oldest cosmology of time —", hi: "आरोहणम् लैब्स ने समय की विश्व की सबसे प्राचीन खगोलीय प्रणाली को पुनर्जीवित किया है —" },
     { en: "Aarohanam Labs has revived the world's oldest cosmology of time —", hi: "आरोहणम् लैब्स ने समय की विश्व की सबसे प्राचीन खगोलीय प्रणाली को पुनर्जीवित किया है —" },
     { en: "a 30-hour", hi: "३० घंटे का" },
@@ -496,6 +513,7 @@
     { en: "A clock that turns", hi: "एक घड़ी जो घूमती है" },
     { en: "with the sun.", hi: "सूर्य के साथ।" },
     { en: "For five thousand years, India measured time not by the swing of a", hi: "पाँच हज़ार वर्षों तक, भारत ने समय को लोलक के दोलन से नहीं बल्कि" },
+    { en: "pendulum but by the rising of the sun. Sūryodaya to sūryodaya —", hi: "सूर्योदय से मापा। सूर्योदय से सूर्योदय —" },
     { en: "pendulum but by the rising of the sun.", hi: "सूर्योदय से मापा।" },
     { en: "Sūryodaya to sūryodaya", hi: "सूर्योदय से सूर्योदय" },
     { en: "one full day, divided into thirty equal muhurats. We hold the patent", hi: "एक पूर्ण दिन, तीस समान मुहूर्तों में विभाजित। इस प्रणाली के डिजिटल" },
@@ -509,16 +527,18 @@
     
     // Recognition & Journey
     { en: "Recognition & Journey", hi: "मान्यता और यात्रा" },
+    { en: "From a foundation stone to a national symbol.", hi: "शिलान्यास से लेकर राष्ट्रीय प्रतीक तक।" },
     { en: "From a foundation stone", hi: "शिलान्यास से लेकर" },
     { en: "to a national symbol.", hi: "राष्ट्रीय प्रतीक तक।" },
     { en: "Three years. Three sacred installations. One ancient idea, returning.", hi: "तीन वर्ष। तीन पवित्र स्थापनाएं। एक प्राचीन विचार की वापसी।" },
     { en: "Each tower is more than a timekeeper. It is a public reassertion that India’s astronomical heritage is precise, alive, and worth standing 85 feet tall for.", hi: "प्रत्येक टॉवर केवल एक समयमापक से कहीं अधिक है। यह एक सार्वजनिक उद्घोष है कि भारत की खगोलीय धरोहर सटीक, जीवंत और ८५ फीट ऊंची शान से खड़े होने योग्य है।" },
     { en: "Each tower is more than a timekeeper. It is a public reassertion that India's astronomical heritage is precise, alive, and worth standing 85 feet tall for.", hi: "प्रत्येक टॉवर केवल एक समयमापक से कहीं अधिक है। यह एक सार्वजनिक उद्घोष है कि भारत की खगोलीय धरोहर सटीक, जीवंत और ८५ फीट ऊंची शान से खड़े होने योग्य है।" },
     
-    // Cards (Image 1)
+    // Cards (Image 1, 2, 3)
     { en: "UJJAIN · MP", hi: "उज्जैन · मध्य प्रदेश" },
     { en: "Ujjain · MP", hi: "उज्जैन · मध्य प्रदेश" },
     { en: "Jantar Mantar Tower", hi: "जंतर मंतर टॉवर" },
+    { en: "Inaugurated virtually by PM Narendra Modi on Feb 29, 2024. The flagship installation, adjacent to the Government Jiwaji Observatory.", hi: "२९ फरवरी २०२४ को प्रधानमंत्री नरेंद्र मोदी द्वारा वर्चुअल उद्घाटन। शासकीय जीवाजी वेधशाला के समीप प्रमुख स्थापना।" },
     { en: "85-FOOT LANDMARK · 2024", hi: "८५ फीट ऐतिहासिक स्थल · २०२४" },
     { en: "85-foot landmark · 2024", hi: "८५ फीट ऐतिहासिक स्थल · २०२४" },
     { en: "85-FOOT LANDMARK", hi: "८५ फीट ऐतिहासिक स्थल" },
@@ -568,6 +588,8 @@
     { en: "Varanasi · Uttar Pradesh", hi: "वाराणसी · उत्तर प्रदेश" },
     { en: "Presented by CM Mohan Yadav to UP CM Yogi Adityanath. PM Modi’s subsequent visit pushed digital reach past 7.8 million.", hi: "मुख्यमंत्री मोहन यादव द्वारा यूपी के मुख्यमंत्री योगी आदित्यनाथ को भेंट। प्रधानमंत्री मोदी के दौरे ने डिजिटल पहुंच को ७.८ मिलियन के पार पहुंचाया।" },
     { en: "Presented by CM Mohan Yadav to UP CM Yogi Adityanath. PM Modi's subsequent visit pushed digital reach past 7.8 million.", hi: "मुख्यमंत्री मोहन यादव द्वारा यूपी के मुख्यमंत्री योगी आदित्यनाथ को भेंट। प्रधानमंत्री मोदी के दौरे ने डिजिटल पहुंच को ७.८ मिलियन के पार पहुंचाया।" },
+    { en: "Gifted by CM Yadav to UP CM Yogi Adityanath. PM Modi’s visit drove a digital reach of 7.8 million across India and abroad.", hi: "मुख्यमंत्री यादव द्वारा यूपी के मुख्यमंत्री योगी आदित्यनाथ को भेंट। प्रधानमंत्री मोदी के दौरे ने भारत और विदेश में ७.८ मिलियन की डिजिटल पहुंच बनाई।" },
+    { en: "Gifted by CM Yadav to UP CM Yogi Adityanath. PM Modi's visit drove a digital reach of 7.8 million across India and abroad.", hi: "मुख्यमंत्री यादव द्वारा यूपी के मुख्यमंत्री योगी आदित्यनाथ को भेंट। प्रधानमंत्री मोदी के दौरे ने भारत और विदेश में ७.८ मिलियन की डिजिटल पहुंच बनाई।" },
     { en: "All Twelve Jyotirlingas", hi: "सभी बारह ज्योतिर्लिंग" },
     { en: "Phase I Rollout · Pan-India", hi: "चरण १ प्रसार · अखिल भारतीय" },
     { en: "Aarohanam is now in talks to install Vedic Ghadis at every Jyotirlinga site, with international shrines to follow.", hi: "आरोहणम् अब प्रत्येक ज्योतिर्लिंग स्थल पर वैदिक घड़ियां स्थापित करने के लिए वार्ता में है, जिसके बाद अंतरराष्ट्रीय तीर्थस्थल भी शामिल होंगे।" },
